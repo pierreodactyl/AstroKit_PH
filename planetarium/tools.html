@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AstroKit — Planetarium Tools</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+		
+		<style>
+			/* Custom Styles for the Software Grid */
+			.tools-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 30px;
+				margin-top: 2em;
+			}
+
+			.tool-card {
+				background: rgba(11, 12, 16, 0.6);
+				border: 1px solid rgba(102, 252, 241, 0.2);
+				border-left: 4px solid #66fcf1; /* Cyan Accent */
+				padding: 30px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				transition: all 0.3s ease;
+				backdrop-filter: blur(5px);
+			}
+
+			.tool-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 0 30px rgba(102, 252, 241, 0.15);
+				border-color: #66fcf1;
+				background: rgba(11, 12, 16, 0.9);
+			}
+
+			.tool-header {
+				display: flex;
+				align-items: center;
+				margin-bottom: 15px;
+			}
+
+			.tool-icon {
+				font-size: 2em;
+				color: #66fcf1;
+				margin-right: 15px;
+			}
+
+			.tool-card h3 {
+				margin: 0;
+				font-family: 'Orbitron', sans-serif;
+				color: #ffffff;
+				letter-spacing: 0.05em;
+			}
+
+			.tool-card p {
+				font-family: 'Roboto Mono', monospace;
+				font-size: 0.9em;
+				color: #c5c6c7;
+				margin-bottom: 20px;
+				line-height: 1.6;
+			}
+
+			.tool-badge {
+				display: inline-block;
+				font-size: 0.7em;
+				background: rgba(102, 252, 241, 0.1);
+				color: #66fcf1;
+				padding: 2px 8px;
+				border-radius: 4px;
+				margin-top: 5px;
+				font-family: 'Roboto Mono', monospace;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../generic.html">Learning Modules</a></li>
+						<li><a href="../sky/skymap.html">Sky Map</a></li>
+						<li><a href="#" class="active">Tools</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+		<div id="wrapper">
+
+			<section id="main" class="wrapper style1">
+				<div class="inner">
+					<h1 class="major">Open-Source Planetarium Tools</h1>
+					<p>Essential software for astronomy visualization, data analysis, and mission tracking. All tools listed below are free to use.</p>
+
+					<div class="tools-grid">
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-star tool-icon"></i>
+									<div>
+										<h3>Stellarium</h3>
+										<span class="tool-badge">VISUALIZATION</span>
+									</div>
+								</div>
+								<p>A realistic 3D sky for your computer. It shows a realistic sky in 3D, just like you would see with the naked eye, binoculars or a telescope. Essential for planning observations.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://stellarium.org/" target="_blank" class="button primary small">Download / Access</a></li>
+							</ul>
+						</div>
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-globe tool-icon"></i>
+									<div>
+										<h3>Celestia</h3>
+										<span class="tool-badge">3D SIMULATION</span>
+									</div>
+								</div>
+								<p>Unlike planetarium software, Celestia allows you to travel throughout the solar system and beyond. View the galaxy from any perspective in 3D space.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://celestia.space/" target="_blank" class="button small">Download</a></li>
+							</ul>
+						</div>
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-broadcast-tower tool-icon"></i>
+									<div>
+										<h3>NASA Radio JOVE</h3>
+										<span class="tool-badge">DATA ANALYSIS</span>
+									</div>
+								</div>
+								<p>Software for viewing and analyzing radio data from Jupiter and the Sun. Perfect for students building the AstroKit dipole antenna to detect solar bursts.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://radiojove.gsfc.nasa.gov/" target="_blank" class="button small">Access Archive</a></li>
+							</ul>
+						</div>
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-satellite-dish tool-icon"></i>
+									<div>
+										<h3>NASA DSN Now</h3>
+										<span class="tool-badge">LIVE TELEMETRY</span>
+									</div>
+								</div>
+								<p>Real-time status of the Deep Space Network. See which antennas are currently talking to Voyager, Curiosity, and other spacecraft right now.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://eyes.nasa.gov/dsn/dsn.html" target="_blank" class="button small">Launch Live Feed</a></li>
+							</ul>
+						</div>
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-microchip tool-icon"></i>
+									<div>
+										<h3>Zadig (RTL-SDR)</h3>
+										<span class="tool-badge">DRIVER UTILITY</span>
+									</div>
+								</div>
+								<p>Required tool to install the correct USB drivers for your AstroKit RTL-SDR dongle. Without this, your computer will not recognize the radio telescope.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://zadig.akeo.ie/" target="_blank" class="button small">Download Zadig</a></li>
+							</ul>
+						</div>
+
+						<div class="tool-card">
+							<div>
+								<div class="tool-header">
+									<i class="icon solid fa-wave-square tool-icon"></i>
+									<div>
+										<h3>SDR# (Sharp)</h3>
+										<span class="tool-badge">SPECTRUM ANALYZER</span>
+									</div>
+								</div>
+								<p>The standard software for listening to radio signals. Visualizes the "Waterfall" of frequency data. Used in Module 2 for detecting the Hydrogen Line.</p>
+							</div>
+							<ul class="actions">
+								<li><a href="https://airspy.com/download/" target="_blank" class="button small">Download SDR#</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; AstroKit PH. All rights reserved.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
