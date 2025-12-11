@@ -1,63 +1,145 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstroKit — Learning Modules</title>
+  <link rel="stylesheet" href="styles.css">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #0b0e16;
+      color: #e3e8f0;
+      margin: 0;
+      padding: 0;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    header {
+      background: #111520;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1e2333;
+    }
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</section>
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #8ab4ff;
+      letter-spacing: 1px;
+    }
 
-			</div>
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .module-card {
+      background: #151a26;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #232b3d;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
 
-	</body>
+    .module-card:hover {
+      transform: translateY(-4px);
+      border-color: #3b4a68;
+      background: #1a2030;
+    }
+
+    .module-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #a2c7ff;
+    }
+
+    .module-desc {
+      font-size: 0.9rem;
+      color: #c4ccdd;
+      line-height: 1.4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      color: #68748d;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>AstroKit Learning Modules</h1>
+  </header>
+
+  <div class="container">
+    <p style="font-size: 1rem; color: #cdd6e4;">
+      Jump into curated lessons designed for Filipino classrooms, AV clubs, and self-learners. 
+      Each module includes explanations, visuals, activities, and worksheets.
+    </p>
+
+    <div class="modules-grid">
+
+      <!-- Module 1 -->
+      <div class="module-card" onclick="location.href='module1.html'">
+        <div class="module-title">Module 1: Introduction to Radio Astronomy</div>
+        <div class="module-desc">
+          Learn how radio telescopes work, why we listen to the sky, and how electromagnetic waves reveal hidden cosmic structures.
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card" onclick="location.href='module2.html'">
+        <div class="module-title">Module 2: The Hydrogen Line (1420 MHz)</div>
+        <div class="module-desc">
+          Explore the famous 21-cm line, how it maps the Milky Way, and why your own antenna can detect it.
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card" onclick="location.href='module3.html'">
+        <div class="module-title">Module 3: Building a Low-Cost Radio Telescope</div>
+        <div class="module-desc">
+          Step-by-step guide to your circular patch feed, LNA, RTL-SDR setup, calibration, and safety.
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card" onclick="location.href='module4.html'">
+        <div class="module-title">Module 4: Data Collection & Spectrum Analysis</div>
+        <div class="module-desc">
+          Learn how to capture signals, read graphs, filter noise, and analyze the hydrogen line with confidence.
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card" onclick="location.href='module5.html'">
+        <div class="module-title">Module 5: Astronomy for the Filipino Classroom</div>
+        <div class="module-desc">
+          Activities, worksheets, and local-context lessons connecting space science with the Philippines.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    AstroKit by Pierre, Jane, Reymond, and Arlene — 2025
+  </footer>
+
+</body>
 </html>
