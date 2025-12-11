@@ -4023,3 +4023,119 @@ input, select, textarea {
 .button:hover:before {
     width: 100%;
 }
+
+
+/* ============================================================
+   ASTROKIT PH - TEAM & CONTACT REDESIGN (The Command Deck)
+   ============================================================ */
+
+/* --- 1. THE DEEP VOID BACKGROUND (For Team & Contact Only) --- */
+/* This ensures Team (#three) and Contact (#contact) do NOT have the grid.
+   Instead, they get a deep, vignette spotlight effect. */
+#three, #contact {
+    background-color: #050608; /* Darker than the rest */
+    background-image: radial-gradient(circle at top right, #1f2833 0%, #000000 80%);
+    position: relative;
+    box-shadow: inset 0 10px 30px rgba(0,0,0,0.8); /* Shadow at the top to separate from grid */
+    border-top: 1px solid rgba(102, 252, 241, 0.2); /* Thin Cyan Separator Line */
+}
+
+/* --- 2. HOLOGRAPHIC CREW CARDS (Team Section) --- */
+/* This transforms the boring bullet points into floating glass cards */
+#three ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to stack on mobile */
+    gap: 15px;
+}
+
+#three ul li {
+    flex: 1 1 100%; /* Full width on mobile, adjusts on desktop */
+    background: rgba(255, 255, 255, 0.03); /* Frosted Glass Tint */
+    backdrop-filter: blur(4px); /* Blurs what's behind it */
+    border: 1px solid rgba(102, 252, 241, 0.1); /* Subtle Cyan Border */
+    border-left: 4px solid #66fcf1; /* Thick Cyan "Rank" Bar */
+    padding: 20px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 0 !important; /* Overrides default spacing */
+}
+
+/* Hover Effect: Card slides out and glows */
+#three ul li:hover {
+    transform: translateX(10px); /* Slides right */
+    background: rgba(31, 40, 51, 0.8);
+    border-color: #66fcf1;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.15);
+}
+
+#three ul li strong {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.1em;
+    display: block; /* Puts name on its own line */
+    margin-bottom: 5px;
+}
+
+/* --- 3. COMMS TRANSMISSION PANEL (Contact Section) --- */
+/* Transformations for the form inputs to look like a spaceship console */
+
+/* The Container for the form */
+#contact .split.style1 > section:first-child {
+    background: rgba(11, 12, 16, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* The Inputs (Name, Email, Message) */
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    background-color: #0b0c10 !important; /* Pitch Black */
+    border: none !important;
+    border-bottom: 2px solid #2c3e50 !important; /* Dark Grey Underline */
+    border-radius: 0 !important; /* Square corners */
+    color: #c5c6c7 !important;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+/* When you click to type */
+#contact form input:focus,
+#contact form textarea:focus {
+    background-color: #0f111a !important;
+    border-bottom-color: #66fcf1 !important; /* Turns Cyan */
+    box-shadow: 0 10px 20px -10px rgba(102, 252, 241, 0.2);
+    color: #66fcf1 !important;
+}
+
+/* The Labels */
+#contact form label {
+    color: #66fcf1;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* The Contact Info (Email/Github links) */
+#contact ul.contact li h3 {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 1px solid #66fcf1;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#contact ul.contact li a {
+    color: #8892b0;
+    transition: color 0.3s ease;
+}
+
+#contact ul.contact li a:hover {
+    color: #66fcf1;
+}
