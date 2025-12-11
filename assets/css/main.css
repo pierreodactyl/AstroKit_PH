@@ -3920,8 +3920,8 @@ input, select, textarea {
 
 #intro {
     position: relative;
-    /* NEW: 'ellipse at center' moves the glow to the middle */
-    background: radial-gradient(ellipse at center, #1f2833 0%, #050608 70%); 
+    /* OLD: background: radial-gradient(ellipse at bottom, ...); */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
     overflow: hidden;
     z-index: 1;
 }
@@ -4220,4 +4220,5 @@ input, select, textarea {
     color: rgba(255,255,255,0.7);
     line-height: 1.6;
 }
+
 
