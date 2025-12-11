@@ -4139,3 +4139,74 @@ input, select, textarea {
 #contact ul.contact li a:hover {
     color: #66fcf1;
 }
+
+/* ============================================================
+   ASTROKIT PH - MODULES REDESIGN (Holo-Cells)
+   ============================================================ */
+
+/* 1. LAYOUT: Fix the "Incomplete Lines" by using a real Grid */
+#two .features {
+    display: grid;
+    /* This creates 2 columns automatically, switching to 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px; /* Actual space between the boxes */
+    background: transparent;
+    border: none;
+}
+
+/* 2. THE CELLS: Glass Panels instead of flat boxes */
+#two .features section {
+    width: 100% !important; /* Forces full width in the grid cell */
+    border: 1px solid rgba(102, 252, 241, 0.2) !important; /* Full border */
+    background: rgba(11, 12, 16, 0.6); /* Darker glass background */
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 0px; /* Keep it square/technical */
+    transition: all 0.3s ease;
+    
+    /* Remove the old Hyperspace border logic */
+    margin: 0 !important;
+    border-top: 1px solid rgba(102, 252, 241, 0.2) !important;
+    border-left: 1px solid rgba(102, 252, 241, 0.2) !important;
+}
+
+/* Hover Effect: The entire cell lights up */
+#two .features section:hover {
+    background: rgba(11, 12, 16, 0.9);
+    border-color: #66fcf1 !important; /* Bright Cyan Border */
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.15);
+    transform: translateY(-5px);
+}
+
+/* 3. THE ICONS: Remove the "Bubble", make it a Hologram */
+#two .features section .icon.major {
+    background: transparent; /* Removes the white circle */
+    width: auto;
+    height: auto;
+    line-height: 1;
+    margin-bottom: 25px;
+    text-align: left; /* Aligns icon with text */
+    padding: 0;
+    border-radius: 0;
+}
+
+/* The Glowing Glyph */
+#two .features section .icon.major:before {
+    font-size: 3em; /* Make it BIG */
+    color: #66fcf1; /* Neon Cyan */
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.8); /* The Glow */
+    font-weight: 900; /* Thicker icons */
+}
+
+/* 4. TYPOGRAPHY: Align text to the new look */
+#two .features section h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+}
+
+#two .features section p {
+    margin-bottom: 0;
+    opacity: 0.8;
+}
